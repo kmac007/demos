@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    body {
+      font-size: 14px;
+      color: #87968e;
+      background-color: #fff2e3;
+      text-align: center;
+    }
+    ul,li {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .layout {
+      width: 800px;
+      margin: 0 auto;
+    }
+    .header h1 {
+      margin-top: 30px;
+      font-size: 42px;
+    }
+    .intro {
+      margin-top: 10px;
+      opacity: 0.6;
+    }
+    .demo-btns {
+      margin: 40px 0;
+    }
+    .demo-btns li {
+      display: inline-block;
+    }
+    .btn {
+      display: block;
+      margin: 3px;
+      padding: 6px 14px;
+      border-radius: 2px;
+      background-color: #72b890;
+      text-decoration: none;
+      color: #fff;
+    }
+    .btn:hover {
+      opacity: 0.8;
+    }
+    .active {
+      opacity: 0.6;
+    }
+    .more {
+      margin-top: 30px;
+    }
+    .more li {
+      display: inline-block;
+    }
+    .footer {
+      margin-top: 30px;
+    }
+    .about {
+      text-decoration: none;
+      color: #72b890;
+    }
+  </style>
+</head>
+<body>
+  <div class="header layout">
+    <h1>我的项目</h1>
+    <p class="intro">一句话项目介绍</p>
+  </div>
+  <div class="content layout">
+    <ul class="demo-btns">
+      <li><a class= "btn active" href="#">项目1</a></li>
+      <li><a class= "btn" href="#">项目2</a></li>
+      <li><a class= "btn" href="#">项目3</a></li>
+      <li><a class= "btn" href="#">项目4</a></li>
+      <li><a class= "btn" href="#">项目5</a></li>
+    </ul>
+    <div class="preview">
+      <img src="http://7xpvnv.com2.z0.glb.qiniucdn.com/65d4aba2-a097-4b24-aaa0-ebbaf7eedab2" alt="作品图片">
+    </div>
+    <ul class="more">
+      <li><a class= "btn" href="#">查看源码</a></li>
+      <li><a class= "btn" href="#">使用说明</a></li>
+    </ul>
+  </div>
+  <div class="footer layout">
+    作者:<a href="#" class="about">我</a>
+  </div>
+</body>
+</html>
