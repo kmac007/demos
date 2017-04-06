@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 900px;
+}
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.head-bar {
+  width: 100%;
+  background-color: #222;
+}
+.logo>img {
+  width: 70px;
+  margin-top: 10px;
+  margin-left: 100px;
+}
+.nav-bar {
+  float: right;
+  margin: 0 ;
+  margin-right: 90px;
+}
+.nav-bar>li {
+  float: left;
+  list-style: none;
+  padding: 25px;
+}
+.nav {
+  text-decoration: none;
+  color: #fff;
+}
+.nav:hover {
+  color: #fec503;
+}
+.banner {
+  height: 400px;
+  background-image: url(./img/header.jpg)
+}
