@@ -3,40 +3,69 @@ body {
   padding: 0;
   min-width: 900px;
 }
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
 .clearfix:after {
   content: '';
   display: block;
   clear: both;
 }
+
+
 /*head style*/
+
 .head-bar {
   width: 100%;
   background-color: #222;
   position: fixed;
   top: 0;
+  z-index: 100;
 }
+
 .logo>img {
   width: 70px;
   margin-top: 10px;
   margin-left: 100px;
 }
+
 .nav-bar {
   float: right;
-  margin: 0 ;
+  margin: 0;
   margin-right: 90px;
 }
+
 .nav-bar>li {
   float: left;
   list-style: none;
   padding: 25px;
 }
+
 .nav {
   text-decoration: none;
   color: #fff;
 }
+
 .nav:hover {
   color: #fec503;
 }
+
 .banner {
   padding-top: 180px;
   padding-bottom: 200px;
@@ -45,27 +74,30 @@ body {
   background-size: 100%;
   text-align: center;
 }
+
 .banner>h2 {
   margin-top: 120px;
-  font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: italic;
   font-size: 40px;
   color: #fff;
 }
+
 .banner>h1 {
-  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #fff;
   font-size: 75px;
   font-weight: 700;
   line-height: 75px;
 }
+
 .btn {
   display: block;
   padding: 20px 30px;
   margin: 0 auto;
   width: 140px;
   color: #fff;
-  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   background-color: #fed136;
@@ -73,43 +105,54 @@ body {
   border-radius: 3px;
   text-decoration: none;
 }
+
 .btn:hover {
   background-color: #f6bf01;
 }
+
+
 /*service style*/
+
 #services {
   padding: 150px 0;
   text-align: center;
 }
+
 .layout {
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
 }
+
 #services>.layout>h2 {
   font-size: 40px;
   margin-top: 0;
   margin-bottom: 15px;
 }
+
 #services>.layout>h3 {
   font-size: 16px;
-  font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: italic;
   font-weight: 400;
   margin-bottom: 75px;
   color: #777;
 }
+
 .wrap {
   width: 1170px;
   margin: 0 auto;
+  text-align: center;
 }
+
 .services-list {
   float: left;
   width: 30%;
   padding-left: 19px;
   padding-right: 19px;
 }
+
 .services-list>span {
   display: block;
   margin: 0 auto;
@@ -118,63 +161,455 @@ body {
   width: 112px;
   height: 112px;
 }
+
+.services-list>span>i {
+  color: #fff;
+  font-size: 60px;
+  line-height: 112px;
+}
+
 .services-list>h4 {
   margin: 15px 0;
   font-size: 18px;
   line-height: 1.1;
 }
+
 .services-list>p {
   color: #777;
 }
+
+
 /*cups style*/
+
 #cups {
   padding: 150px 0;
   background-color: #f7f7f7;
   text-align: center
 }
+
+.cup-hover {
+  position: relative;
+}
+
+.cup-hover:hover .cup-hover-content {
+  opacity: .9;
+  cursor: pointer;
+}
+
+.cup-hover>img {
+  width: 100%;
+  height: 100%;
+}
+
+.cup-hover-content {
+  position: absolute;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%);
+  color: #fff;
+  font-size: 60px;
+  line-height: 260px;
+  background-color: rgba(254, 209, 54, .9);
+  opacity: 0;
+}
+
 .cup-detail>h2 {
   font-size: 40px;
   margin-top: 0;
   margin-bottom: 15px;
-  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    text-transform: uppercase;
-    font-weight: 700;
+  font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
 }
+
 .cup-detail>h3 {
   font-size: 16px;
-  font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: italic;
   font-weight: 400;
   margin-bottom: 75px;
   color: #777;
 }
+
 .cups-list {
+  box-sizing: border-box;
   float: left;
-  width: 30%;
+  width: 33.33333%;
   padding-left: 19px;
-  padding-right: 19px;
+  padding-right: 10px;
+  padding-bottom: 30px;
+  overflow: hidden;
 }
+
+.imfor {
+  overflow: hidden;
+  background-color: #fff;
+}
+
 .cup-hover {
   background-color: #f6bf01;
   width: 360px;
   height: 260px;
   margin: 0 auto;
 }
+
 .imfor>h4 {
   font-size: 18px;
   line-height: 1.1;
   font-weight: 700;
 }
+
 .time {
   font-size: 16px;
-  font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  margin-bottom: 15px;
+  color: #777;
+}
+
+
+/*about style*/
+
+#about {
+  padding: 150px 0;
+  text-align: center;
+}
+
+.about-header>h2 {
+  font-size: 40px;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.about-header>h3 {
+  font-size: 16px;
+  font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: italic;
   font-weight: 400;
   margin-bottom: 75px;
   color: #777;
 }
-/*about style*/
-#about {
+
+.timeline {
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+}
+
+.timeline>li {
+  margin-bottom: 100px;
+  list-style: none;
+  position: relative;
+}
+
+.timeline-left {
+  box-sizing: border-box;
+  width: 41%;
+  float: left;
+  padding: 0 20px 20px 100px;
+  text-align: right;
+}
+
+.timeline-right {
+  box-sizing: border-box;
+  width: 41%;
+  float: right;
+  padding: 0 100px 20px 20px;
+  text-align: left;
+}
+
+.timeline-time {
+  margin-top: 0;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.timeline-name {
+  margin-top: 0;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.timeline-body>p {
+  font-size: 14px;
+  line-height: 1.75;
+  color: #777;
+  margin: 0 0 10px
+}
+
+.timeline-img {
+  box-sizing: border-box;
+  width: 170px;
+  height: 170px;
+  border-radius: 100%;
+  border: 7px solid #f1f1f1;
+  position: absolute;
+  left: 50%;
+  margin-left: -85px;
+  z-index: 99;
+}
+
+.timeline-img>img {
+  border-radius: 50%;
+  width: 100%;
+}
+
+.timeline-img>p {
+  margin: 0;
+  padding-top: 40px;
+  border-radius: 50%;
+  width: 100%;
+  padding: 47px 0;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.75;
+  background-color: #fed136;
+  color: #fff;
+}
+
+
+/*line*/
+
+.timeline:before {
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  content: "";
+  width: 2px;
+  background-color: #f1f1f1;
+  left: 50%;
+  margin-left: -1.5px;
+}
+
+.timeline>li:last-child {
+  margin-bottom: 0;
+  height: 170px;
+}
+
+
+/*team style*/
+
+#team {
   padding: 150px 0;
-  text-align: center
+  background-color: #f7f7f7;
+}
+
+.team-head>h2 {
+  font-size: 40px;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.team-head>h3 {
+  font-size: 16px;
+  font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  margin-bottom: 75px;
+  color: #777;
+}
+
+.team-member {
+  width: 33.3%;
+  float: left;
+  margin-bottom: 50px;
+}
+
+.team-member>h4 {
+  margin-top: 25px;
+  margin-bottom: 0;
+  font-size: 18px;
+}
+
+.team-member>p {
+  color: #777;
+  margin: 0 0 10px;
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+.img-circle {
+  border: 7px solid #fff;
+  border-radius: 50%;
+}
+
+.list-inline {
+  width: 150px;
+  margin: 0 auto;
+}
+
+.list-inline>li {
+  padding-right: 5px;
+  padding-left: 5px;
+  float: left;
+}
+
+.list-inline>li>a {
+  display: block;
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  font-size: 20px;
+  line-height: 40px;
+  outline: 0;
+  color: #fff;
+  background-color: #000;
+  transition: all .3s;
+}
+
+.list-inline>li>a:hover {
+  background-color: #fed136;
+}
+
+.describe {
+  width: 750px;
+  margin: 0 auto;
+  color: #777;
+  font-size: 16px;
+  line-height: 1.75;
+  text-align: center;
+}
+
+
+/*sponsor style*/
+
+#sponsor {
+  height: 150px;
+  background-color: #fff;
+}
+
+.sponsor-list>li {
+  float: left;
+  box-sizing: border-box;
+  width: 25%;
+  margin-top: 50px;
+  padding-left: 100px;
+}
+
+
+/*contact style*/
+
+#contact {
+  padding: 150px 0;
+  background-image: url(../img/old-trafford.jpg);
+}
+
+.contact-head {
+  text-align: center;
+}
+
+.contact-head>h2 {
+  color: #fff;
+  font-size: 40px;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.contact-head>h3 {
+  font-size: 16px;
+  font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  margin-bottom: 75px;
+  color: #f1f1f1;
+}
+
+.contact-left {
+  width: 50%;
+  float: left;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.contact-left>input {
+  padding: 20px;
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 25px;
+  outline: none;
+}
+
+.contact-left>input:focus {
+  border-color: #fed136;
+  box-shadow: none;
+}
+
+.contact-right {
+  width: 50%;
+  box-sizing: border-box;
+  float: right;
+  padding: 0 15px;
+}
+
+.contact-right>textarea {
+  padding: 20px;
+  box-sizing: border-box;
+  height: 236px;
+  width: 100%;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 25px;
+  outline: none;
+}
+
+.contact-right>textarea:focus {
+  border-color: #fed136;
+  box-shadow: none;
+}
+
+.sucess>p {
+  padding: 20px 40px;
+  box-sizing: border-box;
+  width: 229px;
+  cursor: pointer;
+}
+
+
+/*footer style*/
+
+#footer {
+  padding: 25px 0;
+}
+
+.copyright {
+  line-height: 40px;
+}
+
+.col {
+  float: left;
+  width: 33.33333%;
+}
+
+.quick-link {
+  margin-left: 100px;
+}
+
+.quick-link>li {
+  float: left;
+  padding-left: 5px;
+  padding-right: 10px;
+}
+
+.quick-link>li>a {
+  display: block;
+  color: #fed136;
+  line-height: 40px;
+  text-decoration: none;
+}
+
+.quick-link>li>a:hover {
+  text-decoration: underline;
 }
