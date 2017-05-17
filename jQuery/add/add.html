@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="../jquery-3.2.1.min.js"></script>
+  <style>
+    body {
+      font: 12px/150% Arial, Verdana, "\5b8b\4f53";
+      color: #666;
+    }
+
+    ul,
+    li {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .clearfix:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+
+    .products-list {
+      margin-top: -10px;
+      margin-left: -10px;
+      text-align: center;
+    }
+
+    .layout {
+      width: 746px;
+      margin: 0 auto;
+    }
+
+    .products-list>li {
+      position: relative;
+      float: left;
+      width: 200px;
+      padding: 10px 20px;
+      margin-left: 10px;
+      margin-top: 10px;
+      text-align: center;
+      border: 1px solid #eee;
+      background: #fff;
+    }
+
+    .pro-name {
+      text-align: left;
+    }
+
+    .price {
+      color: #c81623;
+      text-align: left;
+    }
+
+    .hover .cover {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.3);
+      transition: all .3s;
+    }
+
+    .buy-it {
+      display: none;
+    }
+
+    .hover .cover .buy-it {
+      display: block;
+      width: 80px;
+      height: 30px;
+      background-color: #fff;
+      color: #c81623;
+      border: 1px solid #c81623;
+      border-radius: 5px;
+      line-height: 30px;
+      cursor: pointer;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: -40px;
+      margin-top: -15px;
+    }
+
+    .btn {
+      width: 50px;
+      text-align: center;
+      color: #c81623;
+      padding: 15px;
+      border: 1px solid #c81623;
+      border-radius: 5px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="layout">
+    <ul class="products-list clearfix">
+      <li>
+        <div class="cover">
+          <div class="buy-it">点击购买
+          </div>
+        </div>
+        <div>
+          <img src="http://img10.360buyimg.com/N3/jfs/t1360/330/897475737/123557/23624706/55b05e25N13d4ec5e.jpg">
+          <p class="pro-name">藏美千足金和田玉路路通吊坠</p>
+          <p class="price">￥1699.00</p>
+        </div>
+      </li>
+      <li>
+        <div class="cover">
+          <div class="buy-it">点击购买
+          </div>
+        </div>
+        <div>
+          <img src="http://img10.360buyimg.com/N3/jfs/t1360/330/897475737/123557/23624706/55b05e25N13d4ec5e.jpg">
+          <p class="pro-name">藏美千足金和田玉路路通吊坠</p>
+          <p class="price">￥1699.00</p>
+        </div>
+      </li>
+      <li>
+        <div class="cover">
+          <div class="buy-it">点击购买
+          </div>
+        </div>
+        <div>
+          <img src="http://img10.360buyimg.com/N3/jfs/t1360/330/897475737/123557/23624706/55b05e25N13d4ec5e.jpg">
+          <p class="pro-name">藏美千足金和田玉路路通吊坠</p>
+          <p class="price">￥1699.00</p>
+        </div>
+      </li>
+      <li>
+        <div class="cover">
+          <div class="buy-it">点击购买
+          </div>
+        </div>
+        <div>
+          <img src="http://img10.360buyimg.com/N3/jfs/t1360/330/897475737/123557/23624706/55b05e25N13d4ec5e.jpg">
+          <p class="pro-name">藏美千足金和田玉路路通吊坠</p>
+          <p class="price">￥1699.00</p>
+        </div>
+      </li>
+      <li>
+        <div class="cover">
+          <div class="buy-it">点击购买
+          </div>
+        </div>
+        <div>
+          <img src="http://img10.360buyimg.com/N3/jfs/t1360/330/897475737/123557/23624706/55b05e25N13d4ec5e.jpg">
+          <p class="pro-name">藏美千足金和田玉路路通吊坠</p>
+          <p class="price">￥1699.00</p>
+        </div>
+      </li>
+      <li>
+        <div class="cover">
+          <div class="buy-it">点击购买
+          </div>
+        </div>
+        <div>
+          <img src="http://img10.360buyimg.com/N3/jfs/t1360/330/897475737/123557/23624706/55b05e25N13d4ec5e.jpg">
+          <p class="pro-name">藏美千足金和田玉路路通吊坠</p>
+          <p class="price">￥1699.00</p>
+        </div>
+      </li>
+    </ul>
+    <div class="btn">添加
+    </div>
+  </div>
+</body>
+<script>
+  var products = [{
+    img: 'http://img10.360buyimg.com/N3/jfs/t2242/92/1446546284/374195/9196ac66/56af0958N1a723458.jpg',
+    name: '珂兰 黄金手 猴哥款',
+    price: '￥405.00'
+  }, {
+    img: 'http://img10.360buyimg.com/N3/jfs/t2242/92/1446546284/374195/9196ac66/56af0958N1a723458.jpg',
+    name: '珂兰 黄金转运珠 猴哥款',
+    price: '￥100.00'
+  }, {
+    img: 'http://img10.360buyimg.com/N3/jfs/t2242/92/1446546284/374195/9196ac66/56af0958N1a723458.jpg',
+    name: '珂兰 黄金手链 3D猴哥款',
+    price: '￥45.00'
+  }];
+
+  function getProducts(info) {
+    var htmlStr = ''
+    var htmlStr = "<li><div class='cover'><div class = 'buy-it'>点击购买</div></div>"
+    htmlStr += "<div><img src='" + info.img + "'>"
+    htmlStr += "<p class='pro-name'>" + info.name + "</p>"
+    htmlStr += "<p class='price'>" + info.price + "</p>"
+    htmlStr += "</div></li>"
+    return htmlStr
+  }
+  $(".products-list").on('mouseenter', "li", function () {
+    $(this).addClass('hover')
+  })
+  $(".products-list").on('mouseleave', "li", function () {
+    $(this).removeClass('hover')
+  })
+  $('.btn').on('click', function () {
+    $.each(products, function (idx, obj) {
+      $(".products-list").append(getProducts(obj))
+    })
+  })
+</script>
+
+</html>
