@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>side-nav</title>
+  <script src="../jquery-3.2.1.min.js"></script>
+  <style>
+    ul,
+    li {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .side-nav {
+      background-color: #c7171e;
+      font-size: 14px;
+      width: 200px;
+    }
+
+    .category {
+      position: relative;
+    }
+
+    .category>ul {
+      display: none;
+      position: absolute;
+      left: 200px;
+      top: 0;
+      border: 1px solid #ccc;
+      width: 200px;
+    }
+
+    .category>ul>li {
+      width: 100px;
+      box-sizing: border-box;
+      padding: 10px;
+      float: left;
+      cursor: pointer;
+    }
+
+    .category>a {
+      display: block;
+      padding: 10px 10px;
+      margin: 0 10px;
+      color: #fff;
+      text-decoration: none;
+      border-bottom: 1px dotted #de272e
+    }
+
+    .category>span {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <ul class="side-nav">
+    <li class="category">
+      <a href="#">珠宝玉器</a>
+      <span>></span>
+      <ul class="child-panel">
+        <li>翡翠</li>
+        <li>玉石</li>
+        <li>宝石</li>
+        <li>水晶</li>
+        <li>珍珠</li>
+        <li>琥珀</li>
+        <li>钻石</li>
+        <li>玛瑙</li>
+        <li>和田</li>
+        <li>宝石</li>
+      </ul>
+    </li>
+    <li class="category">
+      <a href="#">珠宝玉器</a>
+      <span>></span>
+      <ul class="child-panel">
+        <li>翡翠</li>
+        <li>玉石</li>
+        <li>宝石</li>
+        <li>水晶</li>
+        <li>珍珠</li>
+        <li>琥珀</li>
+      </ul>
+    </li>
+    <li class="category">
+      <a href="#">珠宝玉器</a>
+      <span>></span>
+      <ul class="child-panel">
+        <li>翡翠</li>
+        <li>玉石</li>
+        <li>宝石</li>
+        <li>水晶</li>
+      </ul>
+    </li>
+    <li class="category">
+      <a href="#">珠宝玉器</a>
+      <span>></span>
+      <ul class="child-panel">
+        <li>翡翠</li>
+        <li>玉石</li>
+        <li>宝石</li>
+        <li>水晶</li>
+        <li>珍珠</li>
+        <li>琥珀</li>
+      </ul>
+    </li>
+    <li class="category">
+      <a href="#">珠宝玉器</a>
+      <span>></span>
+      <ul class="child-panel">
+        <li>翡翠</li>
+        <li>玉石</li>
+        <li>宝石</li>
+        <li>水晶</li>
+      </ul>
+    </li>
+  </ul>
+</body>
+<script>
+  var $category = $(".side-nav .category")
+  $category.on('mouseenter', function () {
+    $(this).find($(".child-panel")).show()
+  })
+  $category.on('mouseleave', function () {
+    $(this).find($(".child-panel")).hide()
+  })
+</script>
+
+</html>

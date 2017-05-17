@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    .clearfix::after {
+      content: ' ';
+      display: block;
+      clear: both;
+    }
+
+    ul,
+    li {
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    .tab {
+      border: 1px solid #ccc;
+      width: 400px;
+    }
+
+    .tab-header {
+      border-bottom: 1px solid #ccc;
+    }
+
+    .tab-header>li {
+      float: left;
+      width: 33.33%;
+      text-align: center;
+      box-sizing: border-box;
+      padding: 10px 0;
+      cursor: pointer;
+    }
+
+    .tab-header>li:first-child,
+    .tab-header>li:nth-child(2) {
+      border-right: 1px solid #ccc;
+    }
+
+    .active {
+      background-color: #ccc;
+    }
+
+    .tab-content {
+      padding: 10px 20px;
+      height: 200px;
+    }
+
+    .tab-content>li {
+      display: none;
+    }
+
+    .tab-content>.show {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="tab">
+    <ul class="tab-header clearfix">
+      <li class="active">tab1</li>
+      <li>tab2</li>
+      <li>tab3</li>
+    </ul>
+    <ul class="tab-content">
+      <li class="show">内容1</li>
+      <li>内容2</li>
+      <li>内容3</li>
+    </ul>
+  </div>
+  <script>
+    function $(id) {
+      return document.querySelector(id)
+    }
+
+    function $$(cls) {
+      return document.querySelectorAll(cls)
+    }
+
+    var tabHeader = $(".tab-header")
+    var tabHeadList = $$(".tab-header>li")
+    var tabCtList = $$(".tab-content>li")
+    tabHeader.addEventListener("click", function (e) {
+      if (e.target.tagName.toLowerCase() === "li") {
+        for (var i = 0; i < tabHeader.children.length; i++) {
+          tabHeader.children[i].classList.remove("active")
+        }
+        e.target.classList.add("active")
+        var index = [].indexOf.call(tabHeadList, e.target)
+        for (var i = 0; i < tabCtList.length; i++) {
+          tabCtList[i].classList.remove("show")
+        }
+        tabCtList[index].classList.add("show")
+      }
+    })
+  </script>
+</body>
+
+</html>
